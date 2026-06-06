@@ -31,18 +31,27 @@ class CircularLinkedList:
             current.next = Node(value, self.head)
     
     def delete_begin(self):
-        if self.head.next is not None:
-            if self.head.next.next is not None:
-                self.head.next = self.head.next.next
+        if self.head is None:
+            return
+        if self.head.next == self.head:
+            self.head = None
+            return
+        current = self.head
+        while current.next != self.head:
+            current = current.next
+        current.next = self.head.next
+        self.head = self.head.next
     
     def delete_end(self):
         if self.head is None:
             return
-        else:
-            current = self.head
-            while current.next.next != self.head:
-                current = current.next
-            current.next = current.next.next
+        if self.head.next == self.head:
+            self.head = None
+            return
+        current = self.head
+        while current.next.next != self.head:
+            current = current.next
+        current.next = self.head
     
     def display(self):
         if self.head is None:
