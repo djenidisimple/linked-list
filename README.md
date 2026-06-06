@@ -22,3 +22,11 @@ On a pu voir dans les liste chaînées simple que chaque élément contient le p
 de son prédéceseur et quand c'est le dernier élément il va pointeur vers None ou null
 mais dans liste chaînée circulaire le dernier élément a le pointeur du 1er élément.
 ```
+
+### Liste doublement chaînée Circulaire
+
+```bash
+On a pu voir dans les liste chaînées double que chaque élément contient le pointeur
+de son prédéceseur et le pointeur de l'élément avant lui, quand c'est 
+le dernier élément il va pointeur vers le tête de liste.
+```
