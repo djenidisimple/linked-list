@@ -40,8 +40,9 @@ class SinglyLinkedList:
     def get_length(self):
         i , current = 0, self.head
         while current.next is not None:
-            current = current.next
             i+=1
+            current = current.next
+        i+=1
         return i
 
     def search(self, target):
@@ -64,4 +65,5 @@ linked.insert_end(9)
 linked.insert_end(10)
 linked.delete_end()
 print("Existe : ", linked.search(5))
+print("Tile : ", linked.get_length())
 linked.display()
