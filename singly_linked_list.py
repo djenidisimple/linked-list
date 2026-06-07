@@ -36,6 +36,13 @@ class SinglyLinkedList:
         while current.next.next is not None:
             current = current.next
         current.next = None
+    
+    def get_length(self):
+        i , current = 0, self.head
+        while current.next is not None:
+            current = current.next
+            i+=1
+        return i
 
     def search(self, target):
         if self.head is None:
