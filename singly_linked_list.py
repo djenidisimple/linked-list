@@ -39,22 +39,28 @@ class SinglyLinkedList:
     
     def get_length(self):
         i , current = 0, self.head
-        while current.next is not None:
-            i+=1
+        while current is not None:
+            i += 1
             current = current.next
-        i+=1
         return i
+    
+    def mid_node(self):
+        if self.head is None:
+            return
+        fast, slow = self.head, self.head
+        while fast is not None and fast.next is not None:
+            slow = slow.next
+            fast = fast.next.next
+
+        return slow.value
 
     def search(self, target):
-        if self.head is None:
-            return False
         current = self.head
-        while current.next is None:
+        while current is not None:
             if current.value == target:
-                break
-            else:
-                current = current.next
-        return current.value == target
+                return True
+            current = current.next
+        return False
         
 
 linked = SinglyLinkedList()
@@ -63,7 +69,8 @@ linked.insert_end(5)
 linked.insert_end(8)
 linked.insert_end(9)
 linked.insert_end(10)
-linked.delete_end()
+# linked.delete_end()
 print("Existe : ", linked.search(5))
 print("Tile : ", linked.get_length())
+print("Middle : ", linked.mid_node())
 linked.display()
