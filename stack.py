@@ -17,13 +17,18 @@ class Stack:
         self.head = self.head.next
         return self.head.value
     
+    def isEmpty(self):
+        return self.head is None
+    
     def peek(self):
         if self.head is None:
             return
         print(self.head.value)
 
 stack = Stack()
+print("isEmpty : ", stack.isEmpty())
 stack.push(5)
 stack.push(8)
+print("isEmpty : ", stack.isEmpty())
 # stack.pop()
 stack.peek()

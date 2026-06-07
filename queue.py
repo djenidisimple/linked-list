@@ -35,6 +35,9 @@ class Queue:
         self.head = new_node 
         return popped_value
     
+    def isEmpty(self):
+        return self.head is None
+    
     def display(self):
         if self.head is None:
             return
