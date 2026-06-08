@@ -61,6 +61,19 @@ class SinglyLinkedList:
                 return True
             current = current.next
         return False
+
+    def reverse(self):
+        prev = None
+        current = self.head
+
+        while current is not None:
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+
+        self.head = prev
+        
         
 
 linked = SinglyLinkedList()
@@ -73,4 +86,7 @@ linked.insert_end(10)
 print("Existe : ", linked.search(5))
 print("Tile : ", linked.get_length())
 print("Middle : ", linked.mid_node())
+
+linked.display()
+linked.reverse()
 linked.display()

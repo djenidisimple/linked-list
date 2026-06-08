@@ -1,0 +1,51 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "AhTwUdgrv5aIqExRTm4Wf",
+      "type": "text",
+      "x": 511.5,
+      "y": 177.5,
+      "width": 190.0799102783203,
+      "height": 200,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "aB",
+      "roundness": null,
+      "seed": 1327451733,
+      "version": 166,
+      "versionNonce": 250794235,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1780910539097,
+      "link": null,
+      "locked": false,
+      "text": "2 -> 5 -> 3 -> None\nhead = 2\nlast_head = None\nlast_head.prev = 3\n2 -> 5 -> None\n3 -> 2 -> 5 -> None\n3 -> 5 -> 2 -> None\n",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "2 -> 5 -> 3 -> None\nhead = 2\nlast_head = None\nlast_head.prev = 3\n2 -> 5 -> None\n3 -> 2 -> 5 -> None\n3 -> 5 -> 2 -> None\n",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
