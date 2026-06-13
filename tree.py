@@ -1,0 +1,1 @@
+# I learn data structure and algorithm, and I want to implement tree data structure in python. I will implement tree using class and object.
