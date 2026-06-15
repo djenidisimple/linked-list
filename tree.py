@@ -35,8 +35,6 @@ def parcours_postfixe(node):
     parcours_postfixe(node.right)
     print(node.value, end=" ")
 
-def bfs(node):
-    pass
 
 # Voici une manière de créer manuellement des arbres binaires
 tree = Node(10, left=Node(5), right=Node(15))
@@ -45,6 +43,21 @@ print("")
 parcours_prefixe(tree)
 print("")
 parcours_postfixe(tree)
+print("")
+def bfs(node):
+    if node is None:
+        return
+    queue = [node]
+
+    while len(queue) > 0:
+        current = queue.pop(0)
+        print(current.value, end=" ")
+        if current.left is not None:
+            queue.append(current.left)
+        if current.right is not None:
+            queue.append(current.right)
+
+bfs(tree) 
 '''
     10
    /  \
