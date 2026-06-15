@@ -12,8 +12,39 @@ class Node:
         self.left = left
         self.right = right
 
+def parcours_infixe(node):
+    if node is None:
+        return
+    parcours_infixe(node.left)
+
+    print(node.value, end=" ")
+    
+    parcours_infixe(node.right)
+
+def parcours_prefixe(node):
+    if node is None:
+        return
+    print(node.value, end=" ")
+    parcours_prefixe(node.left)
+    parcours_prefixe(node.right)
+
+def parcours_postfixe(node):
+    if node is None:
+        return
+    parcours_postfixe(node.left)
+    parcours_postfixe(node.right)
+    print(node.value, end=" ")
+
+def bfs(node):
+    pass
+
 # Voici une manière de créer manuellement des arbres binaires
 tree = Node(10, left=Node(5), right=Node(15))
+parcours_infixe(tree)
+print("")
+parcours_prefixe(tree)
+print("")
+parcours_postfixe(tree)
 '''
     10
    /  \
